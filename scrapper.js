@@ -2,7 +2,7 @@ var request = require("request");
 var fs = require("fs");
 
 request({
-    uri: "http://example.com"
+    uri: process.argv[2]
 }, function(error, response, body) {
     //delete file if exists
     fs.unlink('webpage.txt', function(notExist) {
